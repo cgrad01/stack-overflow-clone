@@ -20,10 +20,14 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: postgres
+  host: db
 
 development:
   <<: *default
   database: matt-soloflow_development
+  username: postgres
+  host: db
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +62,8 @@ development:
 test:
   <<: *default
   database: matt-soloflow_test
+  username: postgres
+  host: db
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
